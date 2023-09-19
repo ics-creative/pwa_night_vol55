@@ -1,0 +1,108 @@
+/* 三角関数と独立transformのスタイル */
+.menuItem {
+  transition:
+    translate 0.35s var(--easeOutQuart),
+    scale 0.2s var(--easeOutQuart);
+  scale: 0.4;
+  translate: 0 0;
+
+  --angle: calc(40deg * var(--index) + 36deg);
+}
+
+.menuButton.active ~ .menuItem {
+  transition:
+    translate 0.3s calc(0.03s * var(--index)) var(--easeOutQuart),
+    scale 0.35s calc(0.06s * var(--index) + 0.04s) var(--easeBounceCustom);
+  scale: 1;
+  translate: calc(cos(var(--angle)) * 80px) calc(sin(var(--angle)) * -80px);
+}
+
+/* その他のスタイル */
+
+.menuButtonWrapper {
+  position: fixed;
+  right: 80px;
+  bottom: 80px;
+  z-index: 100;
+
+  @media (width >= 801px) {
+    display: none;
+  }
+}
+
+.menuButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  margin-top: -6px;
+  margin-left: -6px;
+  color: #fff;
+  appearance: none;
+  cursor: pointer;
+  background-color: transparent;
+  background-color: #425395;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+}
+
+.menuItemStyle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  appearance: none;
+  background-color: transparent;
+  background-color: #4a6be5;
+  border: none;
+  border-radius: 24px;
+}
+
+.menuIcon {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  transition:
+    visibility 0.35s,
+    opacity 0.35s,
+    scale 0.2s 0.08s cubic-bezier(0.46, 1.56, 0.64, 1);
+
+  &__close {
+    visibility: hidden;
+    opacity: 0;
+    scale: 0.6;
+  }
+}
+
+.menuButton.active {
+  .menuIcon {
+    visibility: hidden;
+    opacity: 0;
+    scale: 0.6;
+  }
+
+  .menuIcon__close {
+    visibility: visible;
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.menuItemIcon {
+  display: block;
+  width: 26px;
+  height: 26px;
+  font-size: 26px;
+  color: #fff;
+}

@@ -1,0 +1,35 @@
+.indexWrapper {
+  width: 360px;
+  margin: 0 auto;
+}
+
+.indexTitle {
+  margin-bottom: 32px;
+  font-size: 48px;
+  text-align: center;
+}
+
+.indexList {
+  li {
+    margin-bottom: 32px;
+    list-style: none;
+
+    a {
+      transition: 0.2s var(--easeOutQuart);
+
+      &:hover {
+        color: #ff4419;
+      }
+    }
+  }
+}
+
+.indexText {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.technologies {
+  display: block;
+  font-size: 12px;
+}

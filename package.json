@@ -1,0 +1,25 @@
+{
+  "name": "my-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "prettier": "prettier \"**/*.{css,scss,ts,js,html}\" --write",
+    "stylelint": "stylelint --fix src/assets/style/*.scss",
+    "format": "pnpm run prettier && pnpm run stylelint"
+  },
+  "devDependencies": {
+    "@types/node": "20.6.2",
+    "dotenv": "16.3.1",
+    "prettier": "3.0.3",
+    "sass": "1.66.1",
+    "stylelint": "15.10.3",
+    "stylelint-config-recess-order": "4.3.0",
+    "stylelint-config-standard-scss": "11.0.0",
+    "typescript": "5.0.2",
+    "vite": "4.4.5"
+  }
+}

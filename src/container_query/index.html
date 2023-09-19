@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>コンテナクエリの活用 - ダッシュボード</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="/assets/style/style.scss" />
+    <style>
+      .material-symbols-rounded {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboardWrapper">
+      <header class="dashboardHeader">
+        <h1>Dashboard</h1>
+      </header>
+      <aside class="dashboardSidebar">
+        <nav>
+          <ul class="sidebarNavigation">
+            <li class="navigationItem navigationItemStyle">
+              <a href="#!" class="navigationLink current">
+                <span
+                  class="navigationIcon material-symbols-rounded"
+                  aria-hidden="true"
+                >
+                  home </span
+                >Home</a
+              >
+            </li>
+            <li class="navigationItem navigationItemStyle">
+              <a href="#!" class="navigationLink">
+                <span
+                  class="navigationIcon material-symbols-rounded"
+                  aria-hidden="true"
+                >
+                  group </span
+                >Customers</a
+              >
+            </li>
+            <li class="navigationItem navigationItemStyle">
+              <a href="#!" class="navigationLink">
+                <span
+                  class="navigationIcon material-symbols-rounded"
+                  aria-hidden="true"
+                >
+                  trending_up </span
+                >Trending</a
+              >
+            </li>
+            <li class="navigationItem navigationItemStyle">
+              <a href="#!" class="navigationLink"
+                ><span
+                  class="navigationIcon material-symbols-rounded"
+                  aria-hidden="true"
+                >
+                  campaign </span
+                >Campaign</a
+              >
+            </li>
+          </ul>
+          <a class="dashBackToIndex" href="../">目次へ戻る</a>
+        </nav>
+      </aside>
+      <nav class="menuButtonWrapper">
+        <button class="menuButton">
+          <span class="menuIcon material-symbols-rounded"> menu </span>
+          <span class="menuIcon menuIcon__close material-symbols-rounded">
+            close
+          </span>
+        </button>
+        <button class="menuItem menuItemStyle" style="--index: 1">
+          <span class="menuItemIcon material-symbols-rounded"> home </span>
+        </button>
+        <button class="menuItem menuItemStyle" style="--index: 2">
+          <span
+            class="menuItemIcon material-symbols-rounded"
+            aria-hidden="true"
+          >
+            group
+          </span>
+          <span class="srOnly"> Customers </span>
+        </button>
+        <button class="menuItem menuItemStyle" style="--index: 3">
+          <span
+            class="menuItemIcon material-symbols-rounded"
+            aria-hidden="true"
+          >
+            trending_up
+          </span>
+          <span class="srOnly"> Trending </span>
+        </button>
+        <button class="menuItem menuItemStyle" style="--index: 4">
+          <span class="menuItemIcon material-symbols-rounded"> campaign </span>
+        </button>
+      </nav>
+      <main class="dashboardMain">
+        <div class="mainUpperContainer mainUpperContainerStyle">
+          <div class="mainUpper mainUpperStyle">
+            <div class="miniCard">
+              <h2 class="miniCardTitle">Lorem</h2>
+              <p class="miniCardNumber">$100</p>
+              <p class="miniDescription">ipsum dolor sit amet</p>
+            </div>
+            <div class="miniCard">
+              <h2 class="miniCardTitle">Lorem</h2>
+              <p class="miniCardNumber">2.4K</p>
+              <p class="miniDescription">ipsum dolor sit amet</p>
+            </div>
+            <div class="miniCard">
+              <h2 class="miniCardTitle">Lorem</h2>
+              <p class="miniCardNumber">680</p>
+              <p class="miniDescription">ipsum dolor sit amet</p>
+            </div>
+            <div class="miniCard">
+              <h2 class="miniCardTitle">Lorem</h2>
+              <p class="miniCardNumber">1.7</p>
+              <p class="miniDescription">ipsum dolor sit amet</p>
+            </div>
+          </div>
+        </div>
+        <div class="columnLeft">
+          <div class="cardContainer cardContainerStyle">
+            <div class="card cardStyle">
+              <figure class="graph">
+                <img
+                  src="/assets/images/graph_line.svg"
+                  alt=""
+                  width="180"
+                  height="180"
+                />
+              </figure>
+              <div class="dataDetail">
+                <h2 class="dataTitle">Data</h2>
+                <p class="dataDescription">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+                  adipisci amet dolor doloremque eius eveniet nam, neque nihil
+                  nisi, nobis nostrum odit quas quisquam, recusandae sapiente
+                  suscipit tenetur unde vitae!
+                </p>
+              </div>
+            </div>
+            <div class="card cardStyle">
+              <figure class="graph">
+                <img
+                  src="/assets/images/graph_rader.svg"
+                  alt=""
+                  width="180"
+                  height="180"
+                />
+              </figure>
+              <div class="dataDetail">
+                <h2 class="dataTitle">Data</h2>
+                <p class="dataDescription">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+                  adipisci amet dolor doloremque eius eveniet nam, neque nihil
+                  nisi, nobis nostrum odit quas quisquam, recusandae sapiente
+                  suscipit tenetur unde vitae!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columnRight">
+          <div class="cardContainer cardContainerStyle">
+            <div class="card cardStyle">
+              <figure class="graph">
+                <img
+                  src="/assets/images/graph_circle.svg"
+                  alt=""
+                  width="180"
+                  height="180"
+                />
+              </figure>
+              <div class="dataDetail">
+                <h2 class="dataTitle">Data</h2>
+                <p class="dataDescription">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+                  adipisci amet dolor doloremque eius eveniet nam, neque nihil
+                  nisi, nobis nostrum odit quas quisquam, recusandae sapiente
+                  suscipit tenetur unde vitae!
+                </p>
+                <p class="dataDescription">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab
+                  amet blanditiis cumque cupiditate doloribus eaque harum libero
+                  non quis! Asperiores consequatur eius harum modi neque,
+                  quaerat quia rerum similique.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <a class="dashBackToIndexMobile" href="../"
+        ><span class="material-symbols-rounded"> arrow_back </span></a
+      >
+    </div>
+    <script>
+      document.querySelectorAll(".sidebarNavigation a").forEach((a) => {
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.querySelectorAll(".current").forEach((el) => {
+            el.classList.remove("current");
+          });
+          e.target.classList.add("current");
+        });
+      });
+      document.querySelector(".menuButton").addEventListener("click", (el) => {
+        document.querySelector(".menuButton").classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
